@@ -4,6 +4,7 @@
    app.controller('StoreController', function(){
       this.products = ingredients;
    });
+
    app.controller('PanelController', function(){
       this.tab = 1;
       this.selectTab = function(setTab){
@@ -14,13 +15,25 @@
       };
    });
 
+   app.controller('ReviewController', function(){
+      this.review = {};
+      this.addReview = function(product){
+         product.reviews.push(this.review);
+         this.review = {};
+      };
+   });
+
+///////////////////////////////
+///////////////////////////////
+///////////////////////////////
+
    var ingredients = [
    {
       name: "L-Arganine",
       price: 5.00,
       description: "Vaso dialator",
-      canPurchase: false,
-      soldOut: true,
+      canPurchase: true,
+      soldOut: false,
       images: [
       {
          full:"arganine.png",
@@ -30,7 +43,8 @@
          full: "",
          thumbnail: ""
       }
-      ]
+      ],
+      reviews: []
    },
 
    {
@@ -48,7 +62,8 @@
          full: "",
          thumbnail: ""
       }
-      ]
+      ],
+      reviews: []
    },
 
    {
@@ -66,7 +81,8 @@
          full: "",
          thumbnail: ""
       }
-      ]
+      ],
+      reviews: []
    },
 
    {
@@ -84,7 +100,8 @@
          full: "",
          thumbnail: ""
       }
-      ]
+      ],
+      reviews: []
    }
    ]
 
