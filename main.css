@@ -1,0 +1,12 @@
+.card{
+   background-color: #91B1B1;
+   margin-bottom: 25px;
+   margin-top: 25px;
+   padding-top: 20px;
+}
+.ng-invalid.ng-dirty{
+   border-color: red;
+}
+.ng-valid.ng-dirty{
+   border-color: green;
+}
