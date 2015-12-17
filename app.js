@@ -23,6 +23,13 @@
       };
    });
 
+   app.directive('productName', function(){
+      return {
+         restrict: 'E',
+         templateUrl: 'product-name.html'
+      };
+   });
+
 ///////////////////////////////
 ///////////////////////////////
 ///////////////////////////////
